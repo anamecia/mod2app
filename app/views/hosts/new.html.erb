@@ -1,0 +1,9 @@
+<%=form_tag hosts_path do %>
+<%=label :host, :hostname%>
+<%=text_field :host, :hostname%><br>
+<%=label :host, :password%>
+<%=password_field :host, :password%><br>
+<%=label :host, :password_confirmation%>
+<%=password_field :host, :password_confirmation%><br>
+<%=submit_tag 'Create New Host'%>
+<%end%>

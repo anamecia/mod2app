@@ -1,0 +1,6 @@
+<h1>Hi, <%=@host.hostname%></h1>
+
+<%@events.each do |event|%>
+    <h3><%=link_to event.title, event_path(event.id)%></h3>
+
+<%end%>

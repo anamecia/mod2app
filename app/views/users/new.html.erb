@@ -1,0 +1,9 @@
+<%=form_tag users_path do %>
+<%=label :user, :username%>
+<%=text_field :user, :username%><br>
+<%=label :user, :password%>
+<%=password_field :user, :password%><br>
+<%=label :user, :password_confirmation%>
+<%=password_field :user, :password_confirmation%><br>
+<%=submit_tag 'Create New User'%>
+<%end%>

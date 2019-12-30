@@ -1,0 +1,12 @@
+<h1>Hi, <%=@user.username%></h1>
+
+<%if @bookings.count != 0%>
+    <h3>Your Bookings:</h3>
+    <ul>
+        <%@bookings.each do |booking|%>
+            <li><%=link_to booking.event.title, booking_path(booking.id)%></li>
+        <%end%>
+    </ul>
+<%else%>
+    <p>You don't have any bookings</p>
+<%end%>

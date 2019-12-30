@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mod2app</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <%=link_to 'Events', events_path%>
+  <%if current_user%>
+    <%=link_to 'User Homepage', user_path(current_user.id) %>
+    <%=link_to 'Log Out User', userlogout_path %>
+  <%elsif current_host%>
+    <%=link_to 'Host Homepage', host_path(current_host.id) %>
+    <%=link_to 'Log Out Host', hostlogout_path %>
+  <%end%>
+
+    <%= yield %>
+  </body>
+</html>

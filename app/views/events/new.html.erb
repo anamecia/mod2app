@@ -1,0 +1,17 @@
+<%=form_for @event do |f|%>
+    <%=f.label :title%>
+    <%=f.text_field :title%><br>
+    <%=f.label :description%>
+    <%=f.text_area :description%><br>
+    <%=f.label :category%>
+    <%=f.collection_select :category_id, Category.all, :id, :name%><br>
+    <%=f.label :date%>
+    <%=f.date_select :date%><br>
+    <%=f.label :time%>
+    <%=f.time_select :time %><br>
+    <%=f.label :price%>
+    <%=f.number_field :price%><br>
+    <%=f.label :places%>
+    <%=f.number_field :places%><br>
+    <%=f.submit 'Create Event' %>
+<%end%>

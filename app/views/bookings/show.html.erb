@@ -1,0 +1,10 @@
+<h1><%=@booking.event.title%></h1>
+<p>Description: <%=@booking.event.description%></p>
+<p>Date: <%=@date%></p>
+<p>Time: <%=@time%></p>
+<p>Price: <%=@booking.event.price%></p>
+<p>Ticket booked: <%=@booking.ticket%></p>
+
+<%=link_to 'Back', user_path(@booking.user_id)%>
+<%= link_to 'Delete this booking', @booking, method: :delete, data: { confirm: 'Are you sure?' } %>
+

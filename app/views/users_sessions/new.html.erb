@@ -1,0 +1,9 @@
+<%=form_tag users_sessions_path do %>
+<%=label :user, :username%>
+<%=text_field :user, :username%><br>
+<%=label :user, :password%>
+<%=password_field :user, :password%><br>
+<%=submit_tag 'Login'%>
+<%end%>
+<br>
+<%=link_to 'Sign up', new_user_path%>

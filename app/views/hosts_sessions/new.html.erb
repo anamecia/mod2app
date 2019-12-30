@@ -1,0 +1,9 @@
+<%=form_tag hosts_sessions_path do %>
+<%=label :host, :hostname%>
+<%=text_field :host, :hostname%><br>
+<%=label :host, :password%>
+<%=password_field :host, :password%><br>
+<%=submit_tag 'Login'%>
+<%end%>
+<br>
+<%=link_to 'Sign up', new_host_path%>
