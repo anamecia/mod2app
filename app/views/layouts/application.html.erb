@@ -11,25 +11,34 @@
 
   <body>
 
-  <%=link_to '| Events', events_path%>
+  <nav id="nav">
+    <div class="flex-container">
+        <div class="general-links">
+        <h3 class='nav-link'><%=link_to 'Home', '/'%></h3>
+        <h3 class='nav-link'><%=link_to 'Events', events_path%></h3>
+       
+    
+          <%if !current_user && !current_host && !current_admin%>
+          <h3 class='nav-link'><%=link_to 'Log In User', userlogin_path %></h3>
+          <h3 class='nav-link'><%=link_to 'Log In Host', hostlogin_path %></h3>
+          <h3 class='nav-link'><%=link_to 'Log In Admin', adminlogin_path %></h3>
+          <%end%>
+  
+      
+        <%if current_user%>
+          <h3 class='nav-link'><%=link_to 'User Homepage', user_path(current_user.id) %></h3>
+          <h3 class='nav-link'><%=link_to 'Log Out User', userlogout_path %></h3>
+        <%elsif current_host%>
+          <h3 class='nav-link'><%=link_to 'New Event', new_event_path %></h3>
+          <h3 class='nav-link'><%=link_to 'Host Homepage', host_path(current_host.id) %></h3>
+          <h3 class='nav-link'><%=link_to 'Log Out Host', hostlogout_path %></h3>
+        <%elsif current_admin%>
+          <h3 class='nav-link'><%=link_to 'Admin Homepage', adminhomepage_path %></h3>
+          <h3 class='nav-link'><%=link_to 'Log Out Admin', adminlogout_path %></h3>
+        <%end%>
+      
+  </nav>
 
-  <%if !current_user && !current_host && !current_admin%>
-  <%=link_to '| Log In User', userlogin_path %>
-  <%=link_to '| Log In Host', hostlogin_path %>
-  <%=link_to '| Log In Admin', adminlogin_path %>
-  <%end%>
-
-  <%if current_user%>
-    <%=link_to '| User Homepage', user_path(current_user.id) %>
-    <%=link_to '| Log Out User', userlogout_path %>
-  <%elsif current_host%>
-    <%=link_to '| New Event', new_event_path %>
-    <%=link_to '| Host Homepage', host_path(current_host.id) %>
-    <%=link_to '| Log Out Host', hostlogout_path %>
-  <%elsif current_admin%>
-    <%=link_to '| Admin Homepage', adminhomepage_path %>
-    <%=link_to '| Log Out Admin', adminlogout_path %>
-  <%end%>
 
     <%= yield %>
   </body>

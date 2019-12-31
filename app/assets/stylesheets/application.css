@@ -13,3 +13,74 @@
  *= require_tree .
  *= require_self
  */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Merriweather';
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+ #nav{
+     background: #ba3329;
+     width: 100%;
+     padding:15px
+ }
+
+ .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ .events-info-block{
+     width:30%;
+     padding: 20px;
+ }
+
+ .form-block{
+     width: 50%;
+     padding: 10px;
+ }
+
+ .general-links{
+    display: flex;
+    justify-content: flex-start;
+ }
+
+ .nav-link{
+     padding: 10px;
+}
+
+ .nav-link a:link,
+ .nav-link a:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+ .welcome-image{
+     display: block;
+     width: 100vw;
+ }
+
+ .form{
+     margin-left: 20%;
+     margin-right: 20%;
+     background-color: wheat;
+     display: inline-flex
+ }
+
+ .label{
+     padding:20px;
+ }
+
+ 
