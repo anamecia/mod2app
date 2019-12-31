@@ -1,0 +1,28 @@
+<br><br>Admin Homepage
+
+<h1>Hi, <%=@admin.adminname%></h1>
+
+<h2>Reports:</h2>
+
+<%if @most_popular_host != 0%>
+<br><br>Most popular host is:
+<%=@most_popular_host.hostname%>
+<%end%>
+
+<%if @inactive_hosts != []%>
+    <br><br>Inactive hosts are:
+    <%@inactive_hosts.each do |host|%>
+        <li>
+        <%=host.hostname%>
+        </li>
+    <%end%>
+<%end%>
+
+<%if @inactive_users != []%>
+    <br><br>Inactive users are:
+    <%@inactive_users.each do |user|%>
+        <li>
+        <%=user.username%>
+        </li>
+    <%end%>
+<%end%>

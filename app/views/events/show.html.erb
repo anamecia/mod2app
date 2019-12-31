@@ -13,6 +13,10 @@
     </ul>
 <%end%>
 
-<%if current_user && (@event.places > 0)%>
+<%if !current_host && !current_admin && (@event.places > 0)%>
+    <%if current_user%>
     <%=link_to 'Book this event', book_event_path(@event.id)%>
+    <%else%>
+    <%=link_to 'Book this event', userlogin_path%>
+    <%end%>
 <%end%>

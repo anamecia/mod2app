@@ -9,11 +9,14 @@ class AdminsController < ApplicationController
     def create 
         admin = Admin.create(admin_params)
         session[:admin_id] = admin.id 
-        redirect_to admin_path(admin.id)
+        redirect_to adminhomepage_path
     end
 
-    def show
+    def homepage
        @admin = current_admin
+       @inactive_hosts = Host.inactive_hosts
+       @most_popular_host = Host.most_popular_host
+       @inactive_users = User.inactive_users
     end 
 
     private

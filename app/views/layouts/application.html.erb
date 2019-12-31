@@ -11,16 +11,24 @@
 
   <body>
 
-  <%=link_to 'Events', events_path%>
+  <%=link_to '| Events', events_path%>
+
+  <%if !current_user && !current_host && !current_admin%>
+  <%=link_to '| Log In User', userlogin_path %>
+  <%=link_to '| Log In Host', hostlogin_path %>
+  <%=link_to '| Log In Admin', adminlogin_path %>
+  <%end%>
+
   <%if current_user%>
-    <%=link_to 'User Homepage', user_path(current_user.id) %>
-    <%=link_to 'Log Out User', userlogout_path %>
+    <%=link_to '| User Homepage', user_path(current_user.id) %>
+    <%=link_to '| Log Out User', userlogout_path %>
   <%elsif current_host%>
-    <%=link_to 'Host Homepage', host_path(current_host.id) %>
-    <%=link_to 'Log Out Host', hostlogout_path %>
+    <%=link_to '| New Event', new_event_path %>
+    <%=link_to '| Host Homepage', host_path(current_host.id) %>
+    <%=link_to '| Log Out Host', hostlogout_path %>
   <%elsif current_admin%>
-    <%=link_to 'Admin Homepage', admin_path(current_admin.id) %>
-    <%=link_to 'Log Out Admin', adminlogout_path %>
+    <%=link_to '| Admin Homepage', adminhomepage_path %>
+    <%=link_to '| Log Out Admin', adminlogout_path %>
   <%end%>
 
     <%= yield %>

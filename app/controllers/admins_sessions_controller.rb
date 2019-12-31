@@ -8,7 +8,7 @@ class AdminsSessionsController < ApplicationController
         admin = admin.try(:authenticate, params[:admin][:password])
         return redirect_to adminlogin_path unless admin
         session[:admin_id] = admin.id
-        redirect_to admin_path(admin.id)
+        redirect_to adminhomepage_path
     end 
 
     def destroy

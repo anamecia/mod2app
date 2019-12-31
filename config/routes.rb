@@ -23,11 +23,13 @@ Rails.application.routes.draw do
 
   get 'events/:id/booking', to:'bookings#new', as:'book_event'
   ######
-  resources :admins
+  resources :admins, only:[:new,:create]
   resources :admins_sessions, except:[:destroy]
 
   get '/adminlogin', to: 'admins_sessions#new', as: 'adminlogin'
-
   get '/adminlogout', to: 'admins_sessions#destroy', as:'adminlogout'
+  get '/adminhomepage', to: 'admins#homepage', as:'adminhomepage'
 
+  #Reports:
+  
 end
