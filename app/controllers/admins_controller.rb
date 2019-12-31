@@ -17,6 +17,8 @@ class AdminsController < ApplicationController
        @inactive_hosts = Host.inactive_hosts
        @most_popular_host = Host.most_popular_host
        @inactive_users = User.inactive_users
+       @most_popular_category = Event.most_popular_category
+       @most_expensive_event = Event.most_expensive_event
     end 
 
     private

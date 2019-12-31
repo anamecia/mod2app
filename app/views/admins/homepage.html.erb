@@ -5,8 +5,8 @@
 <h2>Reports:</h2>
 
 <%if @most_popular_host != 0%>
-<br><br>Most popular host is:
-<%=@most_popular_host.hostname%>
+<br><br>Most popular host is:<br>
+<%=@most_popular_host%>
 <%end%>
 
 <%if @inactive_hosts != []%>
@@ -26,3 +26,15 @@
         </li>
     <%end%>
 <%end%>
+
+<%if @most_popular_category != nil%>
+    <br><br>Most popular category:<br>
+    <%=@most_popular_category%>
+<%end%>
+
+<%if @most_expensive_event!= nil%>
+    <br><br>Most expensive event:<br>
+    <%=@most_expensive_event.title%><br>
+    <%=@most_expensive_event.price%>
+<%end%>
+  

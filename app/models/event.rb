@@ -6,6 +6,10 @@ class Event < ApplicationRecord
     has_many :users, through: :bookings
 
     def self.most_popular_category
-        # Event.all.max_by(:category_id)
+       Category.all.max_by{|category| category.events.count}.name
     end
+
+    def self.most_expensive_event
+        Event.all.max_by{|event| event.price}
+    end 
 end

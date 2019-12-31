@@ -10,6 +10,7 @@ class Host < ApplicationRecord
             hash[booking.event_id] += booking.ticket
         }
         result = hash.max_by{|k,v|v}
+        Event.find(result[0]).host.hostname
         else
             return 0
         end
