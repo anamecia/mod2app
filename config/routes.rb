@@ -8,20 +8,26 @@ Rails.application.routes.draw do
   get '/userlogin', to: 'users_sessions#new', as: 'userlogin'
 
   get '/userlogout', to: 'users_sessions#destroy', as:'userlogout'
-
-  
+######
   resources :hosts
   resources :hosts_sessions, except:[:destroy]
 
   get '/hostlogin', to: 'hosts_sessions#new', as: 'hostlogin'
 
   get '/hostlogout', to: 'hosts_sessions#destroy', as:'hostlogout'
-
+#####
 
   resources :bookings, except:[:new]
 
   resources :events
 
   get 'events/:id/booking', to:'bookings#new', as:'book_event'
+  ######
+  resources :admins
+  resources :admins_sessions, except:[:destroy]
+
+  get '/adminlogin', to: 'admins_sessions#new', as: 'adminlogin'
+
+  get '/adminlogout', to: 'admins_sessions#destroy', as:'adminlogout'
 
 end

@@ -4,7 +4,7 @@
 <p>Time: <%=@time%></p>
 <p>Unsold Places: <%=@event.places%></p>
 <p>Price: <%=@event.price%></p>
-<%if @users.count != 0%>
+<%if current_host && @users.count != 0%>
     <p>Users</p>
     <ul>
         <%@users.each do |user|%>
@@ -13,6 +13,6 @@
     </ul>
 <%end%>
 
-<%if current_user%>
+<%if current_user && (@event.places > 0)%>
     <%=link_to 'Book this event', book_event_path(@event.id)%>
 <%end%>

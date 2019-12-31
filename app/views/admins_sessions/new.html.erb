@@ -1,0 +1,9 @@
+<%=form_tag admins_sessions_path do %>
+<%=label :admin, :adminname%>
+<%=text_field :admin, :adminname%><br>
+<%=label :admin, :password%>
+<%=password_field :admin, :password%><br>
+<%=submit_tag 'Login'%>
+<%end%>
+<br>
+<%=link_to 'Sign up', new_admin_path%>

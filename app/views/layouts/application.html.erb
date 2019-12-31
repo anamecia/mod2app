@@ -18,6 +18,9 @@
   <%elsif current_host%>
     <%=link_to 'Host Homepage', host_path(current_host.id) %>
     <%=link_to 'Log Out Host', hostlogout_path %>
+  <%elsif current_admin%>
+    <%=link_to 'Admin Homepage', admin_path(current_admin.id) %>
+    <%=link_to 'Log Out Admin', adminlogout_path %>
   <%end%>
 
     <%= yield %>
