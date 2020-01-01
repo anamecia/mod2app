@@ -59,3 +59,4 @@ build-iPhoneSimulator/
 .DS_Store
 node_modules
 db/development.sqlite3
+log/
