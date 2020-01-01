@@ -16,7 +16,7 @@
 
   <body>
 
-  <nav class="navbar fixed-top justify-content-start">
+    <nav class="navbar fixed-top justify-content-start">
       
         <h1 id='title-nav' >APP NAME  /</h1>
    
@@ -44,7 +44,11 @@
         <%end%>
   </nav>
 
-
+  <div class='flash'> 
+    <% if flash[:notice] %>
+      <h3><%= flash[:notice]%></h3>
+    <% end %>
+  </div>
 
     <%= yield %>
 

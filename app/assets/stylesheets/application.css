@@ -57,18 +57,29 @@ body {
     padding-right: 30px;
     
   }
-
   
+ /* event index */
 
- .events-info-block{
-     width:30%;
-     padding: 20px;
+ .event-title{
+     background-color: rgb(161, 161, 161);
+     text-align: center;
+     margin-top: 30px;
  }
 
- /* .form-block{
-     width: 50%;
-     padding: 10px;
- } */
+ .event-info p{
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 10px;
+ }
+
+ .event-title a:link,
+ .event-title a:visited {
+    font-size: 30px;
+    color: white;
+  }
+ 
+
+ 
 
 
 
