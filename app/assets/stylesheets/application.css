@@ -23,7 +23,7 @@
 
 body {
     font-size: 1rem;
-    font-family: 'Merriweather';
+    font-family: 'Open Sans', sans-serif;
 }
 
 .wrapper {
@@ -31,48 +31,79 @@ body {
     margin: 0 auto;
 }
 
- #nav{
+/* nav bar */
+ .navbar{
      background: #ba3329;
      width: 100%;
-     padding:15px
+     padding:12px;
+     display: flex;
+     flex-wrap: wrap;
+     }
+
+ .nav-links{
+    display: flex;
+    /* justify-content:flex-start; */
  }
 
- .flex-container {
-    display: flex;
-    flex-wrap: wrap;
- }
+ .navbar a:link,
+ .navbar a:visited {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 30px 30px 30px 0px;
+  }
+
+  #title-nav{
+    padding-right: 30px;
+    
+  }
+
+  
 
  .events-info-block{
      width:30%;
      padding: 20px;
  }
 
- .form-block{
+ /* .form-block{
      width: 50%;
      padding: 10px;
+ } */
+
+
+
+  /* welcome page */
+ .welcome-container{
+     background-image: url("https://images.unsplash.com/photo-1544818694-bfc4b9d5d644?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+     background-repeat: no-repeat;
+     background-size: cover;
+     height:100vw;
+     background-position: center;
+     text-align: center;
  }
 
- .general-links{
-    display: flex;
-    justify-content: flex-start;
+ #welcome-title{
+    color: white;
+    padding-top: 350px;
+    padding-bottom: 20px;
+    font-size: 100px;
  }
 
- .nav-link{
-     padding: 10px;
-}
+ #welcome-button{
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color:#ad130e;
+    border-color:#ad130e;
+    border-radius: 5px;
+ }
 
- .nav-link a:link,
- .nav-link a:visited {
+ #welcome-button a:link,
+ #welcome-button a:visited{
     color: white;
     text-decoration: none;
-  }
-
- .welcome-image{
-     display: block;
-     width: 100vw;
  }
 
- .form{
+ /* .form{
      margin-left: 20%;
      margin-right: 20%;
      background-color: wheat;
@@ -81,6 +112,12 @@ body {
 
  .label{
      padding:20px;
- }
+ } */
 
+ /* forms */
+
+ .container{
+    margin: auto;
+    padding: 15% 0%;
+ }
  

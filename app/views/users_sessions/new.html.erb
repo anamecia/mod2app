@@ -1,9 +1,20 @@
-<%=form_tag users_sessions_path do %>
-<%=label :user, :username%>
-<%=text_field :user, :username%><br>
-<%=label :user, :password%>
-<%=password_field :user, :password%><br>
-<%=submit_tag 'Login'%>
-<%end%>
-<br>
-<%=link_to 'Sign up', new_user_path%>
+<div class='container row d-flex justify-content-center'>
+    <div class='col-2'></div>
+        <div class='jumbotron col'>
+            <%=form_tag users_sessions_path do %>
+            <%=label :user, :username%>
+            <%=text_field :user, :username%><br>
+            <%=label :user, :password%>
+            <%=password_field :user, :password%><br><br>
+            <%=submit_tag 'Login'%>
+            <%end%>
+            <br>
+            <%=link_to 'Sign up', new_user_path%>
+        </div>
+
+    <div class='col'>
+        <img scr= >
+    </div>
+
+    <div class='col-2'></div>
+</div>

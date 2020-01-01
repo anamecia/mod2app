@@ -1,9 +1,21 @@
-<%=form_tag admins_path do %>
-<%=label :admin, :adminname%>
-<%=text_field :admin, :adminname%><br>
-<%=label :admin, :password%>
-<%=password_field :admin, :password%><br>
-<%=label :admin, :password_confirmation%>
-<%=password_field :admin, :password_confirmation%><br>
-<%=submit_tag 'Create New Admin'%>
-<%end%>
+<div class='container row d-flex justify-content-center'>
+    <div class='col-2'></div>
+
+    <div class='jumbotron col'>
+        <%=form_tag admins_path do %>
+        <%=label :admin, :adminname%>
+        <%=text_field :admin, :adminname%><br>
+        <%=label :admin, :password%>
+        <%=password_field :admin, :password%><br>
+        <%=label :admin, :password_confirmation%>
+        <%=password_field :admin, :password_confirmation%><br><br>
+        <%=submit_tag 'Create New Admin'%>
+        <%end%>
+     </div>
+
+    <div class='col'>
+        <img scr= >
+    </div>
+    
+    <div class='col-2'></div>
+</div>
