@@ -61,6 +61,7 @@ body {
  /* event index */
 
  .event-title{
+     color: white;
      background-color: rgb(161, 161, 161);
      text-align: center;
      margin-top: 30px;
@@ -77,11 +78,6 @@ body {
     font-size: 30px;
     color: white;
   }
- 
-
- 
-
-
 
   /* welcome page */
  .welcome-container{
@@ -129,6 +125,23 @@ body {
 
  .container{
     margin: auto;
-    padding: 15% 0%;
+    padding: 10% 0%;
+ }
+
+ .container-flash{
+    margin-top: 70px;
+    padding:10px
+ }
+
+ .name{
+     margin-bottom: 5%;
+ }
+
+ .btn{
+     padding: 5px 20px ;
+     margin-right: 20px;
+     margin-top: 20px;
+     border-color: black;
+     border-radius: 10%;
  }
  

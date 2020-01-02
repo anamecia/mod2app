@@ -1,6 +1,9 @@
-<h1>Hi, <%=@host.hostname%></h1>
-
-<%@events.each do |event|%>
-    <h3><%=link_to event.title, event_path(event.id)%></h3>
-
-<%end%>
+<div class='container'>
+    <h1 class='name'>Hi, <%=@host.hostname%></h1>
+    <h4 class>Your Events:</h4>
+    <ul>
+    <%@events.each do |event|%>
+        <li><%=link_to event.title, event_path(event.id)%></li>
+    <%end%>
+    </ul>
+</div>

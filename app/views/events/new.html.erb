@@ -1,36 +1,32 @@
-<div class='form flex-container form-block'>
-    <%=form_for @event do |f|%>
-        <div class=label>
-            <%=f.label :title%>
-            <%=f.text_field :title%>
+<div class='container row'>
+    <div class='col-2'></div>
+         <div class='jumbotron col'>
+            <%=form_for @event do |f|%>
+                    <%=f.label :title%>
+                    <%=f.text_field :title%><br><br>
+               
+                    <%=f.label :description%>
+                    <%=f.text_area :description%><br><br>
+               
+                    <%=f.label :category%>
+                    <%=f.collection_select :category_id, Category.all, :id, :name%><br><br>
+               
+                    <%=f.label :date%>
+                    <%=f.date_select :date%><br><br>
+                
+                    <%=f.label :time%>
+                    <%=f.time_select :time %><br><br>
+                       
+                    <%=f.label :price%>
+                    <%=f.number_field :price%><br><br>
+                              
+                    <%=f.label :places%>
+                    <%=f.number_field :places%><br><br>
+                           
+                    <%=f.submit 'Create Event' %>
+            <%end%>
         </div>
-        <div class=label>
-            <%=f.label :description%>
-            <%=f.text_area :description%>
-        </div>
-        <div class=label>
-            <%=f.label :category%>
-            <%=f.collection_select :category_id, Category.all, :id, :name%>
-        </div>
-        <div class=label>
-            <%=f.label :date%>
-            <%=f.date_select :date%>
-        </div>
-        <div class=label>
-            <%=f.label :time%>
-            <%=f.time_select :time %>
-        </div>
-        <div class=label>
-            <%=f.label :price%>
-            <%=f.number_field :price%>
-        </div>
-        <div class=label>
-            <%=f.label :places%>
-            <%=f.number_field :places%>
-        </div>
-        <div class=label>
-            <%=f.submit 'Create Event' %>
+       
+        <div class='col-2'></div>
 
-    <%end%>
 <div>
-            <img src='https://images.unsplash.com/photo-1544818694-bfc4b9d5d644?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80%>'>

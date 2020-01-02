@@ -1,12 +1,14 @@
-<h1>Hi, <%=@user.username%></h1>
+<div class="container">
+    <h1 class='name'>Hi, <%=@user.username%></h1>
 
-<%if @bookings.count != 0%>
-    <h3>Your Bookings:</h3>
-    <ul>
-        <%@bookings.each do |booking|%>
-            <li><%=link_to booking.event.title, booking_path(booking.id)%></li>
-        <%end%>
-    </ul>
-<%else%>
-    <p>You don't have any bookings</p>
-<%end%>
+    <%if @bookings.count != 0%>
+        <h4>Your Bookings:</h4>
+        <ul>
+            <%@bookings.each do |booking|%>
+                <li><%=link_to booking.event.title, booking_path(booking.id)%></li>
+            <%end%>
+        </ul>
+    <%else%>
+        <p>You don't have any bookings</p>
+    <%end%>
+</div>
