@@ -25,10 +25,10 @@
     <%end%>
 
     <%if @event.reviews != [] %>
-    <p id="reviews">Reviews:<p>
+    <h5 id="reviews">Reviews:</h5>
     <% @event.reviews.each {|review|%>
-    <p>Rating: <%=review.rating%></p>  
-    <%=review.content%>
+    <p class="rating">Rating: <%=review.rating%></p>  
+    <div class="content"><%=review.content%></div>
     <%}%>
     <%end%>
 </div>

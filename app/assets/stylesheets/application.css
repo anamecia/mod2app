@@ -152,4 +152,15 @@ body {
      margin-top: 30px;
      font-weight: bold;
  }
+
+ .content{
+    padding: 5px 20px 50px 20px;
+    border-style: solid;
+    border-color: rgb(148, 144, 144);
+ }
+
+ .rating{
+     padding-left: 20px;
+     margin-bottom: 2px;
+ }
  
