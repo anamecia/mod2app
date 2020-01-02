@@ -24,8 +24,8 @@
   
       
         <%if !current_user && !current_host && !current_admin%>
-          <h3 ><i class="fas fa-user icon"></i><%=link_to 'Log In User', userlogin_path %></h3>
-          <h3><i class="fas fa-user icon"></i><%=link_to 'Log In Host', hostlogin_path %></h3>
+          <h3 ><i class="fas fa-user icon fa-xs"></i><%=link_to 'Log In User', userlogin_path %></h3>
+          <h3><i class="fas fa-user icon fa-xs"></i><%=link_to 'Log In Host', hostlogin_path %></h3>
           <h3><%=link_to 'Log In Admin', adminlogin_path %></h3>
         <%end%>
   
