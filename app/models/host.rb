@@ -2,6 +2,9 @@ class Host < ApplicationRecord
     has_many :events 
     has_secure_password
 
+    validates :hostname, {presence:true, uniqueness: true}
+    validates :password, {presence:true}
+
     def self.most_popular_host
         if Booking.all.count >0 
         hash = {}

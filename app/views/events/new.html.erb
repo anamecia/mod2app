@@ -12,16 +12,16 @@
                     <%=f.collection_select :category_id, Category.all, :id, :name%><br><br>
                
                     <%=f.label :date%>
-                    <%=f.date_select :date%><br><br>
+                    <%=f.date_select :date, :start_year=>Time.now.year%><br><br>
                 
                     <%=f.label :time%>
                     <%=f.time_select :time %><br><br>
                        
                     <%=f.label :price%>
-                    <%=f.number_field :price%><br><br>
+                    <%=f.number_field :price, min:0%><br><br>
                               
                     <%=f.label :places%>
-                    <%=f.number_field :places%><br><br>
+                    <%=f.number_field :places, min:1%><br><br>
                            
                     <%=f.submit 'Create Event' %>
             <%end%>

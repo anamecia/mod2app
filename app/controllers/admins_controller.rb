@@ -8,8 +8,13 @@ class AdminsController < ApplicationController
 
     def create 
         admin = Admin.create(admin_params)
-        session[:admin_id] = admin.id 
-        redirect_to adminhomepage_path
+        if admin.valid?
+            session[:admin_id] = admin.id 
+            redirect_to adminhomepage_path
+          else
+            flash[:notice] = admin.errors.full_messages
+            render :new
+          end
     end
 
     def homepage

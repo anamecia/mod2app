@@ -48,7 +48,9 @@
       <div class='container-flash'>
         <h3><%= flash[:notice]%></h3>
       </div>
+      <%flash.clear%>
       <% end %>
+
   </div> 
 
     <%= yield %>

@@ -6,21 +6,28 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-4.times do 
-    Category.create({
-        name:Faker::Coffee.origin
-    })
-end 
+
+Category.create(name:'American')
+Category.create(name:'British')
+Category.create(name:'Caribbean')
+Category.create(name:'Indian')
+Category.create(name:'Chinese')
+Category.create(name:'Sea Food')
+Category.create(name:'Vegetarian')
+Category.create(name:'Japanese')
+Category.create(name:'Lebanese')
+
+datetemp=[Date.parse("Jan 5 2020 10:30"), Date.parse("Jan 20 2020 20:30"), Date.parse("Mar 9 2020 21:00"), Date.parse("Apr 26 2020 12:00"), Date.parse("May 11 2020 13:00")]
 
 10.times do 
     Event.create({
-        price:rand(1..10),
-        date:Date.parse("Dec 8 2016"),
-        time:Time.parse("Dec 8 2016 10:19"),
-        title:Faker::FunnyName.name, 
-        description:Faker::Lorem.paragraph,
-        category_id:rand(1..4),
-        host_id:1,
-        places:rand(1..10)
+        price:rand(10..30),
+        date:datetemp[rand(0..4)],
+        time:datetemp[rand(0..4)],
+        title:Faker::Food.ingredient, 
+        description:Faker::Food.description,
+        category_id:rand(1..9),
+        host_id:rand(1..4),
+        places:rand(5..10)
 })
 end 

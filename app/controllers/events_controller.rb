@@ -11,10 +11,18 @@ class EventsController < ApplicationController
     end 
 
     def create
-        event = Event.create(event_params)
-        event.host = current_host
-        event.save
-        redirect_to host_path(current_host.id)
+        @event = Event.create(event_params)
+        @event.host = current_host
+        @event.save
+        # event.host = current_host
+        # event.save
+        # redirect_to host_path(current_host.id)
+        if @event.valid?
+            redirect_to host_path(current_host.id)
+          else
+            flash[:notice] = @event.errors.full_messages
+            render :new
+          end
     end 
 
     def show

@@ -10,8 +10,13 @@ class HostsController < ApplicationController
     def create 
     
         host = Host.create(host_params)
-        session[:host_id] = host.id 
-        redirect_to host_path(host.id)
+        if host.valid?
+            session[:host_id] = host.id 
+            redirect_to host_path(host.id)
+          else
+            flash[:notice] = host.errors.full_messages
+            render :new
+          end
     end
 
     def show
