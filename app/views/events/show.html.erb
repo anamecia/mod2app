@@ -27,8 +27,7 @@
     <%if @event.reviews != [] %>
     <p id="reviews">Reviews:<p>
     <% @event.reviews.each {|review|%>
-    <p>Rating:</p>
-    <%=review.rating%>
+    <p>Rating: <%=review.rating%></p>  
     <%=review.content%>
     <%}%>
     <%end%>

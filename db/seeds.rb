@@ -43,4 +43,4 @@ words_temp = ["with", "thru"]
         host_id:rand(1..4),
         places:rand(5..10)
 })
-end 
+end
