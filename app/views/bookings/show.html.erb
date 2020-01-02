@@ -7,6 +7,31 @@
         <p>Price: </p><%=@booking.event.price%> <span>£</span>
         <p>Ticket booked: </p><%=@booking.ticket%> 
     </div>
+    <div>
     <button class='btn'><%=link_to 'Back', user_path(@booking.user_id)%><button>
     <button class='btn'><%= link_to 'Delete this booking', @booking, method: :delete, data: { confirm: 'Are you sure?' } %><button>
+    </div>
+
+    <div class='container row d-flex justify-content-center'>
+    <div class='col-2'></div>
+
+    <div class='jumbotron col'>
+        <%=form_tag reviews_path do %>
+        <%=hidden_field :review, :event_id, :value => @booking.event_id%>
+        <%=label :review, :rating%>
+        <%# <%=text_area :review, :rating, options_%>
+        <%=select_tag "review[rating]", raw("<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>")%>
+        <%=label :review, :content%>
+        <%=text_area :review, :content%><br>
+        <%=submit_tag 'Submit review'%>
+        <%end%>
+    </div>
+
+    <div class='col '>
+        <img src=>
+    </div>
+
+    <div class='col-2'></div>
+</div>
+
 </div>

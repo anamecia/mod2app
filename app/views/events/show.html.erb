@@ -5,7 +5,7 @@
     <p>Date:</p> <%=@date%>
     <p>Time:</p> <%=@time%>
     <p>Unsold Places:</p><%=@event.places%>
-    <p>Price:</p> <%=@event.price%> <span>£</span>
+    <p>Price:</p> <span>£</span><%=@event.price%> 
     <%if current_host && @users.count != 0%>
         <p>Users</p>
         <ul>
@@ -18,9 +18,18 @@
 
     <%if !current_host && !current_admin && (@event.places > 0)%>
         <%if current_user%>
-        <%=link_to 'Book this event', book_event_path(@event.id)%>
+        <button class="btn"><%=link_to 'Book this event', book_event_path(@event.id)%></button>
         <%else%>
-        <%=link_to 'Book this event', userlogin_path%>
+        <button class="btn"><%=link_to 'Book this event', userlogin_path%></button>
         <%end%>
+    <%end%>
+
+    <%if @event.reviews != [] %>
+    <p id="reviews">Reviews:<p>
+    <% @event.reviews.each {|review|%>
+    <p>Rating:</p>
+    <%=review.rating%>
+    <%=review.content%>
+    <%}%>
     <%end%>
 </div>

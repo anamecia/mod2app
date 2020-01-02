@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   get '/adminlogout', to: 'admins_sessions#destroy', as:'adminlogout'
   get '/adminhomepage', to: 'admins#homepage', as:'adminhomepage'
 
-  #Reports:
+  #Reviews:
+  resources :reviews, only:[:new,:create]
   
 end

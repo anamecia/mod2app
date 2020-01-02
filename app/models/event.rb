@@ -5,6 +5,8 @@ class Event < ApplicationRecord
     has_many :bookings
     has_many :users, through: :bookings
 
+    has_many :reviews
+
     validates :title, :description, :category_id, :price, :time, :date, :places, {presence:true}
     validate :future_date?
 
