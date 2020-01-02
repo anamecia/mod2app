@@ -11,7 +11,7 @@ class AdminsSessionsController < ApplicationController
         # redirect_to adminhomepage_path
         if admin.try(:authenticate, params[:admin][:password])
             session[:admin_id] = admin.id
-            redirect_to admin_path(admin.id)
+            redirect_to adminhomepage_path
         else
             flash[:notice] = "Sorry, we can't find an admin with that adminname and password"
             redirect_to adminlogin_path

@@ -1,40 +1,41 @@
-<br><br>Admin Homepage
+<div class='container'>
+    <h1 class='name'>Hi, <%=@admin.adminname%></h1>
 
-<h1>Hi, <%=@admin.adminname%></h1>
+    <h4>Reports:</h4>
+    <div class='event-info'>
+        <%if @most_popular_host != 0%>
+        <p>Most popular host is:</p>
+        <%=@most_popular_host%>
+        <%end%>
 
-<h2>Reports:</h2>
+        <%if @inactive_hosts != []%>
+            <p>Inactive hosts are:</p>
+            <%@inactive_hosts.each do |host|%>
+                <li>
+                <%=host.hostname%>
+                </li>
+            <%end%>
+        <%end%>
 
-<%if @most_popular_host != 0%>
-<br><br>Most popular host is:<br>
-<%=@most_popular_host%>
-<%end%>
+        <%if @inactive_users != []%>
+            <p>Inactive users are:</p>
+            <%@inactive_users.each do |user|%>
+                <li>
+                <%=user.username%>
+                </li>
+            <%end%>
+        <%end%>
 
-<%if @inactive_hosts != []%>
-    <br><br>Inactive hosts are:
-    <%@inactive_hosts.each do |host|%>
-        <li>
-        <%=host.hostname%>
-        </li>
-    <%end%>
-<%end%>
+        <%if @most_popular_category != nil%>
+            <p>Most popular category:</p>
+            <%=@most_popular_category%>
+        <%end%>
 
-<%if @inactive_users != []%>
-    <br><br>Inactive users are:
-    <%@inactive_users.each do |user|%>
-        <li>
-        <%=user.username%>
-        </li>
-    <%end%>
-<%end%>
-
-<%if @most_popular_category != nil%>
-    <br><br>Most popular category:<br>
-    <%=@most_popular_category%>
-<%end%>
-
-<%if @most_expensive_event!= nil%>
-    <br><br>Most expensive event:<br>
-    <%=@most_expensive_event.title%><br>
-    <%=@most_expensive_event.price%>
-<%end%>
+        <%if @most_expensive_event!= nil%>
+            <p>Most expensive event:</p>
+            <%=@most_expensive_event.title%><br>
+             <span>£</span><%=@most_expensive_event.price%>
+        <%end%>
+    </div>
+</div>
   

@@ -1,13 +1,21 @@
+<div class='container'>
+    <div class='col-2'></div>
+         <div class='jumbotron col'>
+            <h1><%=@event.title%></h1>
+            <div class='event-info'>
+                <p>Description:</p><%=@event.description%>
+                <p>Available Places:</p><%=@event.places%>
+                <p>Date:</p><%=@event.date%>
+                <p>Time:</p><%=@event.time%>
+                <p>Price:</p><%=@event.price%> <span>£</span>
 
-<h1><%=@event.title%></h1>
-<p><%=@event.description%></p>
-<p>Available Places: <%=@event.places%></p>
-<p>Date: <%=@event.date%></p>
-<p>Time: <%=@event.time%></p>
-
-<%=form_for @booking do |f|%>
-    <%= f.hidden_field :event_id, :value => @event.id%>
-    <p>How many places do you want to book?</p>
-    <%=f.select :ticket, (1..@places)%>
-    <%=f.submit 'Book' %>
-<%end%>
+                <%=form_for @booking do |f|%>
+                    <%= f.hidden_field :event_id, :value => @event.id%>
+                    <p>How many places do you want to book?</p>
+                    <%=f.select :ticket, (1..@places)%>
+                    <%=f.submit 'Book' %>
+                <%end%>
+            </div>
+        </div>
+    <div class='col-2'></div>
+</div>
