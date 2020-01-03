@@ -4,18 +4,15 @@
             <%=form_tag users_sessions_path do %>
                 <div class ="form-group">
                     <%=label :user, :username%>
-                    <%=text_field :user, :username, :class=>"form-control"%><br>
+                    <%=text_field :user, :username, :class=>"form-control"%>
                 </div>
                 <div class ="form-group">
                     <%=label :user, :password%>
-                    <%=password_field :user, :password, :class=>"form-control"%><br><br>
+                    <%=password_field :user, :password, :class=>"form-control"%>
                 </div>
                     <%=submit_tag 'Login', :class=>"btn btn-primary btn-lg"%>
                     <%end%>
-                
-                <%=link_to 'Sign up', new_user_path,:class=>"btn btn-secondary btn-sm"%>
-                
+                <%=link_to 'Sign up', new_user_path,:class=>"btn btn-secondary btn-sm"%>    
         </div>
-
     <div class='col-2'></div>
 </div>

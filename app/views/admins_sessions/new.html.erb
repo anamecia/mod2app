@@ -1,20 +1,18 @@
 <div class='container row d-flex justify-content-center'>
     <div class='col-2'></div>
-
     <div class='jumbotron col'>
         <%=form_tag admins_sessions_path do %>
-        <%=label :admin, :adminname%>
-        <%=text_field :admin, :adminname%><br>
-        <%=label :admin, :password%>
-        <%=password_field :admin, :password%><br>
-        <%=submit_tag 'Login'%>
+            <div class ="form-group">
+                <%=label :admin, :adminname%>
+                <%=text_field :admin, :adminname, :class=>"form-control"%>
+            </div>
+            <div class ="form-group">
+                <%=label :admin, :password%>
+                <%=password_field :admin, :password, :class=>"form-control"%>
+            </div>
+                <%=submit_tag 'Login', :class=>"btn btn-primary btn-lg"%>
         <%end%>
-        <br>
-        <%=link_to 'Sign up', new_admin_path%>
-    </div>
-
-    <div class='col '>
-        <img src=>
+        <%=link_to 'Sign up', new_admin_path, :class=>"btn btn-secondary btn-sm"%>
     </div>
 
     <div class='col-2'></div>
