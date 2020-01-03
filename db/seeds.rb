@@ -34,6 +34,9 @@ User.create(username:"Kathy",password:"password",password_confirmation:"password
 User.create(username:"Brenda",password:"password",password_confirmation:"password")
 User.create(username:"Lisa",password:"password",password_confirmation:"password")
 
+puts "adding admin"
+User.create(username:"admin1",password:"password",password_confirmation:"password")
+
 
 puts "adding events"
 words_temp = ["with", "thru"]

@@ -3,19 +3,20 @@
 
     <div class='jumbotron col'>
         <%=form_tag hosts_path do %>
-        <%=label :host, :hostname%>
-        <%=text_field :host, :hostname%><br>
-        <%=label :host, :password%>
-        <%=password_field :host, :password%><br>
-        <%=label :host, :password_confirmation%>
-        <%=password_field :host, :password_confirmation%><br><br>
-        <%=submit_tag 'Create New Host'%>
+            <div class ="form-group">
+                <%=label :host, :hostname%>
+                <%=text_field :host, :hostname, :class=>"form-control"%>
+            </div>
+            <div class ="form-group">
+                <%=label :host, :password%>
+                <%=password_field :host, :password, :class=>"form-control"%>
+            </div>
+            <div class ="form-group">
+                <%=label :host, :password_confirmation%>
+                <%=password_field :host, :password_confirmation, :class=>"form-control"%>
+            </div>
+                <%=submit_tag 'Create New Host', :class=>"btn btn-primary"%>
         <%end%>
     </div>
-
-    <div class='col'>
-        <img scr= >
-    </div>
-
     <div class='col-2'></div>
 </div>

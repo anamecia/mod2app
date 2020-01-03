@@ -3,18 +3,20 @@
 
     <div class='jumbotron col'>
         <%=form_tag users_path do %>
-        <%=label :user, :username%>
-        <%=text_field :user, :username%><br>
-        <%=label :user, :password%>
-        <%=password_field :user, :password%><br>
-        <%=label :user, :password_confirmation%>
-        <%=password_field :user, :password_confirmation%><br><br>
-        <%=submit_tag 'Create New User'%>
+             <div class ="form-group">
+                <%=label :user, :username%>
+                <%=text_field :user, :username, :class=>"form-control"%>
+            </div>
+            <div class ="form-group">
+                <%=label :user, :password%>
+                <%=password_field :user, :password, :class=>"form-control"%>
+            </div>
+             <div class ="form-group">
+                <%=label :user, :password_confirmation%>
+                <%=password_field :user, :password_confirmation, :class=>"form-control"%>
+            </div>
+        <%=submit_tag 'Create New User', :class=>"btn btn-primary"%>
         <%end%>
-    </div>
-
-    <div class='col'>
-        <img scr= >
     </div>
 
     <div class='col-2'></div>
