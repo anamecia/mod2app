@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
     helper_method :current_user, :user_logged_in?, :current_host, :host_logged_in?, :require_user_logged_in, :require_host_logged_in
     helper_method :current_admin, :admin_logged_in?, :require_admin_logged_in
 
+    before_action :last_visited_event
+
     def current_user
         @user = User.find_by(id:session[:user_id])
     end 
