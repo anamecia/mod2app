@@ -6,8 +6,8 @@
         <h3 class="card-title"><%=link_to event.title, event_path(event.id)%></h3>
         <div class="card-text event-info">
           <p>Description:</p> <%=event.description%>
-          <p>Date:</p><%=event.date%>
-          <p>Time:</p><%=event.time%>
+          <p>Date:</p><%=event.date.strftime('%d %B %Y')%>
+          <p>Time:</p><%=event.time.strftime('%H:%M')%>
           <p>Category:</p><%=event.category.name%>
           <p>Unsold Places:</p><%=event.places%>
           <p>Price:</p><%=event.price%>

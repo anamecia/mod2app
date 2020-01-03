@@ -2,11 +2,6 @@ class ReviewsController < ApplicationController
 
     before_action :require_user_logged_in
 
-    # def new
-    #     @booking = Booking.new
-    #     @event = Event.find(params[:id])
-    #     @places = @event.places
-    # end 
 
     def create
         review = Review.create(review_params)
