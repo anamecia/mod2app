@@ -1,14 +1,18 @@
   <div class="container row row-cols-2">
     <%@events.each do |event|%>
-    <div class="col">
-    <h3 class="event-title"><%=link_to event.title, event_path(event.id)%></h3>
-    <div class="event-info">
-      <p>Description:</p> <%=event.description%>
-      <p>Date:</p><%=event.date%>
-      <p>Time:</p><%=event.time%>
-      <p>Unsold Places:</p><%=event.places%>
-      <p>Price:</p><%=event.price%>
+    <div class="col mb-4">
+      <div class='card'>
+        <img class ="card-img-top" src=<%=event.category.image_url%>>
+        <h3 class="card-title"><%=link_to event.title, event_path(event.id)%></h3>
+        <div class="card-text event-info">
+          <p>Description:</p> <%=event.description%>
+          <p>Date:</p><%=event.date%>
+          <p>Time:</p><%=event.time%>
+          <p>Category:</p><%=event.category.name%>
+          <p>Unsold Places:</p><%=event.places%>
+          <p>Price:</p><%=event.price%>
+        </div>
       </div>
-      </div>
+    </div>
     <%end%>
   </div>
