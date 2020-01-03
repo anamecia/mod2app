@@ -2,19 +2,20 @@
     <div class='col-2'></div>
         <div class='jumbotron col'>
             <%=form_tag users_sessions_path do %>
-            <%=label :user, :username%>
-            <%=text_field :user, :username%><br>
-            <%=label :user, :password%>
-            <%=password_field :user, :password%><br><br>
-            <%=submit_tag 'Login'%>
-            <%end%>
-            <br>
-            <%=link_to 'Sign up', new_user_path%>
+                <div class ="form-group">
+                    <%=label :user, :username%>
+                    <%=text_field :user, :username, :class=>"form-control"%><br>
+                </div>
+                <div class ="form-group">
+                    <%=label :user, :password%>
+                    <%=password_field :user, :password, :class=>"form-control"%><br><br>
+                </div>
+                    <%=submit_tag 'Login', :class=>"btn btn-primary btn-lg"%>
+                    <%end%>
+                
+                <%=link_to 'Sign up', new_user_path,:class=>"btn btn-secondary btn-sm"%>
+                
         </div>
-
-    <div class='col'>
-        <img scr= >
-    </div>
 
     <div class='col-2'></div>
 </div>

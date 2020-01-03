@@ -50,4 +50,10 @@ class ApplicationController < ActionController::Base
         return redirect_to adminlogin_path unless admin_logged_in? 
     end
 
+    private
+
+    def last_visited_event
+        session[:last_visited_event] ||= 0
+    end 
+
 end

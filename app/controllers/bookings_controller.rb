@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
         @event.places -= booking.ticket
         @event.save 
         # byebug
-        redirect_to event_path(@event.id)
+        redirect_to user_path(current_user.id)
     end 
 
     def show

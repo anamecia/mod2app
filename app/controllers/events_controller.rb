@@ -28,6 +28,7 @@ class EventsController < ApplicationController
         @users = @event.users
         @date = @event.date.strftime('%d %B %Y')
         @time = @event.time.strftime('%H:%M')
+        session[:last_visited_event] = @event.id
     end 
 
     private
