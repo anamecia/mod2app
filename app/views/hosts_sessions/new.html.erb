@@ -1,21 +1,19 @@
 <div class='container row d-flex justify-content-center'>
     <div class='col-2'></div>
-
-    <div class='jumbotron col'>
-        <%=form_tag hosts_sessions_path do %>
-        <%=label :host, :hostname%>
-        <%=text_field :host, :hostname%><br>
-        <%=label :host, :password%>
-        <%=password_field :host, :password%><br><br>
-        <%=submit_tag 'Login'%>
-        <%end%>
-        <br>
-        <%=link_to 'Sign up', new_host_path%>
-     </div>
-
-    <div class='col'>
-        <img scr= >
-    </div>
-
+        <div class='jumbotron col'>
+            <%=form_tag hosts_sessions_path do %>
+                <div class ="form-group">
+                    <%=label :host, :hostname%>
+                    <%=text_field :host, :hostname, :class=>"form-control"%>
+                </div>
+                <div class ="form-group">
+                    <%=label :host, :password%>
+                    <%=password_field :host, :password, :class=>"form-control"%>
+                </div>
+                    <%=submit_tag 'Login', :class=>"btn btn-primary btn-lg"%>
+            <%end%>
+    
+                    <%=link_to 'Sign up', new_host_path, :class=>"btn btn-secondary btn-sm"%>
+        </div>
     <div class='col-2'></div>
 </div>
