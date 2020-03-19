@@ -3,9 +3,9 @@
 Social media platform where users can host meals in their houses and other users can book places on their events.
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=12donVUvJVw" target="_blank"><img src="http://img.youtube.com/vi/12donVUvJVw/0.jpg" 
-alt="FOODy" width="240" height="180"/></a>
+alt="FOODy" width="340" height="280"/></a>
 
-<img src='./app/assets/images/Foody-welcomepage.png'>
+<!-- <img src='./app/assets/images/Foody-welcomepage.png'> -->
 
 ## Technologies Used:
  - Ruby on Rails
