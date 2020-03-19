@@ -1,24 +1,51 @@
-# README
+# FOODy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Social media platform where users can host meals in their houses and other users can book places on their events.
 
-Things you may want to cover:
+<img src='./app/assests/images/Foody-welcomepage.png'>
 
-* Ruby version
+## Technologies Used:
+ - Ruby on Rails
+ - CSS
+ - SQLite 
 
-* System dependencies
+ ## Getting Started
 
-* Configuration
+```bash
+bundle install
 
-* Database creation
+rake db:migrate db:seed
 
-* Database initialization
+rails s
+```
 
-* How to run the test suite
+## User Experience
 
-* Services (job queues, cache servers, search engines, etc.)
+There are three types of users in this app: hosts, guests and admin.
+All users need to be loged in to see specific content, if they are loged out they have access to the list of all the events available.
 
-* Deployment instructions
+<img src='./app/assests/images/Foody-events.png'>
 
-* ...
+
+### Host 
+Hosts are able to see their events and respective reviews, they can also create new events.
+
+<img src='./app/assests/images/Foody-formfornewevent.png'>
+
+### Guest
+Guests are able to see their bookings, leave reviews and book events.
+
+<img src='./app/assests/images/Foody-bookevent.png'>
+
+## Admin 
+
+The admin user has access to the stats of the website.
+
+<img src='./app/assests/images/Foody-adminpage.png'>
+
+
+
+
+
+
+
